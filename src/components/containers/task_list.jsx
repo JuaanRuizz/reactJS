@@ -2,13 +2,17 @@ import React, {useEffect, useState} from 'react';
 import { Task } from '../../models/task.class';
 import { LEVELS } from '../../models/levels.enum';
 import TaskComponent from '../pure/task';
+import TaskForm from '../pure/forms/taskForm';
 
 
 const TaskListComponent = () => {
-    const defaultTask = new Task("Example", "Default description", false, LEVELS.NORMAL);
-    
+    const defaultTask1 = new Task("Example 1", "description 1", true, LEVELS.NORMAL);
+    const defaultTask2 = new Task("Example 2", "description 2", false, LEVELS.URGENT);
+    const defaultTask3 = new Task("Example 3", "description 3", false, LEVELS.BLOCKING);
+
+
     //Estado del componente
-    const [task, setTask] = useState(defaultTask);
+    const [tasks, setTasks] = useState([defaultTask1, defaultTask2, defaultTask3]);
     const [loading, setLoading] = useState(true);
 
     //Control ciclo de vida del componente
@@ -18,7 +22,7 @@ const TaskListComponent = () => {
         return () => {
             console.log("TaskList component is going to unmount...")
         };
-    }, [task]);
+    }, [tasks]);
 
     const changeCompleted = (id) => {
         console.log("TO_DO: Cambiar estado de una tarea")
@@ -47,13 +51,19 @@ const TaskListComponent = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {/* TO_DO: Iterar sobre lista de tareas*/}
-                            <TaskComponent task = {defaultTask}></TaskComponent>
+                            {tasks.map((task, index) => {
+                                return (
+                                    <TaskComponent key={index} task = {task}>
+                                    </TaskComponent>
+                                    )
+                                }
+                            )}
                         </tbody>
                     </table>
                 </div>
                 </div>
             </div>
+            <TaskForm></TaskForm>
             {/* TO_DO: Aplicar un For/Map para renderizar una lista */}
             {/* <TaskComponent task = {defaultTask}></TaskComponent> */}
         </div>

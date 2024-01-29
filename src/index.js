@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 
 //Añadimos bootstrap a nuestro proyecto
 import 'bootstrap/dist/css/bootstrap.css'; 
+// import 'bootstarp-icons/font/bootstrap-icons.css'; // Por alguna razón esto no sirve 
+import "bootstrap-icons/font/bootstrap-icons.css";
 // Importante: Los estilos propios deben ir DEBAJO de los bootsrtrap
 import './index.css';
 import App from './App';
@@ -19,3 +21,6 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+
