@@ -24,8 +24,29 @@ const TaskListComponent = () => {
         };
     }, [tasks]);
 
-    const changeCompleted = (id) => {
-        console.log("TO_DO: Cambiar estado de una tarea")
+    function completeTask (task){
+        console.log('Complete this Task:', task);
+        const index = tasks.indexOf(task);
+        const tempTask = [...tasks];
+        tempTask[index].completed = !tempTask[index].completed;
+        //We update the component´s state with the new task´s list and it will update the task´s iteration in order to show the task updated
+        setTasks(tempTask); 
+    }
+
+    function removeTask(task){
+        console.log('Remove this Task:', task);
+        const index = tasks.indexOf(task);
+        const tempTask = [...tasks];
+        tempTask.splice(index,1);
+        setTasks(tempTask);
+    }
+    
+    function addTask(task){
+        console.log('Remove this Task:', task);
+        const index = tasks.indexOf(task);
+        const tempTask = [...tasks];
+        tempTask.push(task);
+        setTasks(tempTask)
     }
 
     return (
@@ -53,7 +74,11 @@ const TaskListComponent = () => {
                         <tbody>
                             {tasks.map((task, index) => {
                                 return (
-                                    <TaskComponent key={index} task = {task}>
+                                    <TaskComponent 
+                                    key={index} 
+                                    task = {task} 
+                                    complete={completeTask}
+                                    remove ={removeTask}>                             
                                     </TaskComponent>
                                     )
                                 }
@@ -63,7 +88,8 @@ const TaskListComponent = () => {
                 </div>
                 </div>
             </div>
-            <TaskForm></TaskForm>
+            
+            <TaskForm add = {addTask}></TaskForm>
             {/* TO_DO: Aplicar un For/Map para renderizar una lista */}
             {/* <TaskComponent task = {defaultTask}></TaskComponent> */}
         </div>
