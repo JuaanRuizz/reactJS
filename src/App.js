@@ -6,6 +6,8 @@ import './App.css';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
 import TaskListComponent from './components/containers/task_list'; 
+// import LoginFormik from './components/pure/forms/loginFormik';
+// import OptionalRender from './components/pure/optionalRender';
 // import Ejemplo1 from './hooks/ejemplo1';
 // import Ejemplo2 from './hooks/ejemplo2';
 // import MyComponentWithContext from './hooks/ejemplo3';
@@ -42,6 +44,13 @@ function App() {
         </a> */}
       {/* </header> */}
 
+      {/* Ejemplo de renderizado condicional */}
+      {/* <OptionalRender></OptionalRender> */}
+
+      {/* Ejemplo de forms (Formik y Yup) */}
+      {/* <LoginFormik></LoginFormik> */}
+
+      {/* Proyecto final */}
       <TaskListComponent></TaskListComponent>
 
       {/* Gestión de eventos */}
