@@ -6,7 +6,9 @@ import './App.css';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
 import TaskListComponent from './components/containers/task_list'; 
-import AsyncExample from './components/pure/AsyncExample';
+import FetchExample from './components/pure/FetchExample';
+// import AsyncExample from './components/pure/AsyncExample';
+// import ObservableExample from './components/pure/ObservableExample';
 // import RegisterFormik from './components/pure/forms/registerFormik';
 // import LoginFormik from './components/pure/forms/loginFormik';
 // import OptionalRender from './components/pure/optionalRender';
@@ -53,7 +55,13 @@ function App() {
       {/* <LoginFormik></LoginFormik> */}
 
       {/* Ejemplo de procesos asíncronos */}
-        <AsyncExample></AsyncExample>
+        {/* <AsyncExample></AsyncExample> */}
+
+      {/* Ejemplo de Valores Observables */}
+      {/* <ObservableExample></ObservableExample> */}
+
+      {/* Ejemplo de Fetch para peticiones HTTP */}
+      <FetchExample></FetchExample>
 
       {/* Proyecto final */}
       {/* <TaskListComponent></TaskListComponent> */}
