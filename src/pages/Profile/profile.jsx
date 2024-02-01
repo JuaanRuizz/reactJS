@@ -23,6 +23,9 @@ const Profile = ({user}) => {
                 Your Profile
             </h1>
             <div>
+                <button onClick={() => goToPath('/task')}>
+                    Tasks
+                </button>
                 <button onClick={goBack}>
                     Go back
                 </button>

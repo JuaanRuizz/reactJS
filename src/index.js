@@ -7,15 +7,18 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 // Importante: Los estilos propios deben ir DEBAJO de los bootsrtrap
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
-import AppRountingOne from './AppRoutingOne';
+// import AppRountingOne from './AppRoutingOne';
+import AppRoutingFinal from './AppRountingFinal';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <AppRountingOne></AppRountingOne>
+    <App></App>
+    {/* <AppRountingOne></AppRountingOne> */}
+    {/* <AppRoutingFinal></AppRoutingFinal> */}
   </React.StrictMode>
 );
 
