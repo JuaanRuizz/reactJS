@@ -6,7 +6,9 @@ import './App.css';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
 import TaskListComponent from './components/containers/task_list'; 
-import FetchExample from './components/pure/FetchExample';
+import AxiosCRUDExample from './components/pure/AxiosCRUDExample';
+// import AxiosExample from './components/pure/AxiosExample';
+// import FetchExample from './components/pure/FetchExample';
 // import AsyncExample from './components/pure/AsyncExample';
 // import ObservableExample from './components/pure/ObservableExample';
 // import RegisterFormik from './components/pure/forms/registerFormik';
@@ -61,7 +63,13 @@ function App() {
       {/* <ObservableExample></ObservableExample> */}
 
       {/* Ejemplo de Fetch para peticiones HTTP */}
-      <FetchExample></FetchExample>
+      {/* <FetchExample></FetchExample> */}
+
+      {/* Ejemplo de AXIOS para peticiones HTTP */}
+      {/* <AxiosExample></AxiosExample> */}
+
+      {/* Ejemplo AXIOS CRUD */}
+      <AxiosCRUDExample></AxiosCRUDExample>
 
       {/* Proyecto final */}
       {/* <TaskListComponent></TaskListComponent> */}
